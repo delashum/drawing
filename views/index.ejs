@@ -21,26 +21,27 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Draw It!
+                        Users
                     </a>
                 </li>
                 <hr>
                 <li ng-repeat="user in users track by $index">
                     {{user.username}}
-                    <div class="user-color pull-right" style="margin-right:10px ;background-color: {{user.color}}"></div>
+                    <div class="user-color pull-right" style="background-color: {{user.color}}"></div>
                 </li>
             </ul>
         </div>
         <div id="page-content-wrapper" class="perspective">
             <div class="panel panel-info">
                 <div class="panel-heading">
+                    <h2 class="pull-left">Draw Cool Things</h2>
                     <div class="panel-btn pull-right">
                         <button class="form-control" ng-click="Clear()">Clear</button>
                     </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="panel-body">
-                    <canvas id="draw" height="700"></canvas>
+                    <canvas id="draw"></canvas>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ user = '';
 
 $(function () {
 
-    $('canvas').attr('height', $('div.panel-body').height());
+    $('canvas').attr('height', $(window).height() * 0.7);
     $('canvas').attr('width', $('div.panel-body').width());
 
     $('#draw').mousedown(function (e) {
@@ -121,7 +121,7 @@ app.controller('ctrl', ['$scope', function ($scope) {
 
         user = $scope.username;
 
-        if (user == "") {
+        if (user == undefined) {
             Message('Please enter something');
             return;
         }
