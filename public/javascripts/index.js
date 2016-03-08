@@ -118,7 +118,7 @@ app.controller('ctrl', ['$scope', function ($scope) {
     socket.on('send-color', function (data) {
         $scope.users.forEach(function (e, i) {
             if (e.username == data.username) {
-                e = data;
+                $scope.users[i] = data;
             }
         });
     });
