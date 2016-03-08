@@ -5,16 +5,66 @@
     <title>
         <%= title %>
     </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script src="https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js"></script>
     <script src="/javascripts/jcanvas.min.js"></script>
     <script src="/javascripts/index.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
-<body>
-    <canvas id="draw" height="300" width="800"></canvas>
+<body ng-app="app" ng-controller="ctrl">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Draw It!
+                    </a>
+                </li>
+                <hr>
+                <li ng-repeat="user in users track by $index">
+                    {{user.username}}
+                    <div class="user-color pull-right" style="background-color: {{user.color}}"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper" class="perspective">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-btn pull-right">
+                        <button class="form-control" ng-click="Clear()">Clear</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-body">
+                    <canvas id="draw"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login">
+        <div class="panel panel-info">
+            <div class="panel-heading center">
+                Please enter a screen name.
+            </div>
+            <div class="panel-body" id="main-panel">
+
+                <form type="form" ng-submit="Login()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="username" placeholder="Screen name..">
+                    </div>
+                    <button class="btn btn-default">Go</button>
+                </form>
+            </div>
+            <div id="message" class="panel-footer alert-danger" style="display: none">
+            </div>
+        </div>
+
+    </div>
+    <div class="white-over"></div>
 </body>
 
 

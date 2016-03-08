@@ -62,10 +62,21 @@ app.use(function (err, req, res, next) {
 
 //start listen with socket.io
 app.io.on('connection', function (socket) {
-    console.log('a user connected');
 
-    socket.on('draw', function (draw) {
-        app.io.emit('receive', draw);
+    socket.on('draw', function (data) {
+        app.io.emit('receive', data);
+    });
+
+    socket.on('new-user', function (data) {
+        app.io.emit('add-user', data);
+    });
+
+    socket.on('send-update', function (data) {
+        app.io.emit('receive-update', data);
+    });
+
+    socket.on('logout', function (data) {
+        app.io.emit('remove-user', data);
     });
 });
 
