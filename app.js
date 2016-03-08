@@ -78,6 +78,10 @@ app.io.on('connection', function (socket) {
     socket.on('logout', function (data) {
         app.io.emit('remove-user', data);
     });
+
+    socket.on('update-color', function (data) {
+        app.io.emit('send-color', data);
+    });
 });
 
 module.exports = app;

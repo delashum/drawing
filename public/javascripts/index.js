@@ -115,6 +115,14 @@ app.controller('ctrl', ['$scope', function ($scope) {
         $scope.$apply();
     });
 
+    socket.on('send-color', function (data) {
+        $scope.users.forEach(function (e, i) {
+            if (e.username == data.username) {
+                e = data;
+            }
+        });
+    });
+
 
 
     $scope.Login = function () {
@@ -136,14 +144,18 @@ app.controller('ctrl', ['$scope', function ($scope) {
         $('.white-over').fadeOut();
         $('.login').slideUp();
     }
-    
-    $scope.changecolor = function(){
-	color = RandomColor();
-	$scope.users.forEach(function (e, i) {
+
+    $scope.changecolor = function () {
+        color = RandomColor();
+        $scope.users.forEach(function (e, i) {
             if (e.username == user) {
-                e.color = color; 
+                e.color = color;
+                socket.emit('update-color', {
+                    username: e.username,
+                    color: color
+                });
             }
-        }); 
+        });
     }
 
     $scope.Clear = function () {
