@@ -121,7 +121,7 @@ app.controller('ctrl', ['$scope', function ($scope) {
 
         user = $scope.username;
 
-        if (user == undefined) {
+        if (user == undefined || user == "") {
             Message('Please enter something');
             return;
         }

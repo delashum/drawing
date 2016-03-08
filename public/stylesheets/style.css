@@ -120,8 +120,7 @@
 }
 
 hr {
-    padding: none;
-    margin: none;
+    margin-top: 0px;
 }
 
 .white-over {
@@ -153,4 +152,248 @@ div.login {
 
 .panel-body {
     padding: none;
+}
+
+.badge {
+    text-indent: 0px;
+}
+
+.panel-title {
+    font-size: 30px;
+}
+
+
+/*
+Custom Bootstrap
+*/
+
+.text-blue {
+    color: #00308f;
+}
+
+a.text-blue:hover,
+a.text-blue:focus {
+    color: #002061;
+}
+
+.bg-blue {
+    background-color: #99bbff;
+}
+
+a.bg-blue:hover,
+a.bg-blue:focus {
+    background-color: #6b9cff;
+}
+
+.table > thead > tr > td.blue,
+.table > tbody > tr > td.blue,
+.table > tfoot > tr > td.blue,
+.table > thead > tr > th.blue,
+.table > tbody > tr > th.blue,
+.table > tfoot > tr > th.blue,
+.table > thead > tr.blue > td,
+.table > tbody > tr.blue > td,
+.table > tfoot > tr.blue > td,
+.table > thead > tr.blue > th,
+.table > tbody > tr.blue > th,
+.table > tfoot > tr.blue > th {
+    background-color: #99bbff;
+}
+
+.table-hover > tbody > tr > td.blue:hover,
+.table-hover > tbody > tr > th.blue:hover,
+.table-hover > tbody > tr.blue:hover > td,
+.table-hover > tbody > tr:hover > .blue,
+.table-hover > tbody > tr.blue:hover > th {
+    background-color: #85adff;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #0055ff;
+    border-color: #0050f0;
+}
+
+.btn-blue:focus,
+.btn-blue.focus {
+    color: #fff;
+    background-color: #0044cc;
+    border-color: #002775;
+}
+
+.btn-blue:hover {
+    color: #fff;
+    background-color: #0044cc;
+    border-color: #003cb3;
+}
+
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue {
+    color: #fff;
+    background-color: #0044cc;
+    border-color: #003cb3;
+}
+
+.btn-blue:active:hover,
+.btn-blue.active:hover,
+.open > .dropdown-toggle.btn-blue:hover,
+.btn-blue:active:focus,
+.btn-blue.active:focus,
+.open > .dropdown-toggle.btn-blue:focus,
+.btn-blue:active.focus,
+.btn-blue.active.focus,
+.open > .dropdown-toggle.btn-blue.focus {
+    color: #fff;
+    background-color: #003cb3;
+    border-color: #002775;
+}
+
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue {
+    background-image: none;
+}
+
+.btn-blue.disabled:hover,
+.btn-blue[disabled]:hover,
+fieldset[disabled] .btn-blue:hover,
+.btn-blue.disabled:focus,
+.btn-blue[disabled]:focus,
+fieldset[disabled] .btn-blue:focus,
+.btn-blue.disabled.focus,
+.btn-blue[disabled].focus,
+fieldset[disabled] .btn-blue.focus {
+    background-color: #0055ff;
+    border-color: #0050f0;
+}
+
+.btn-blue .badge {
+    color: #0055ff;
+    background-color: #fff;
+}
+
+.label-blue {
+    background-color: #0055ff;
+}
+
+.label-blue[href]:hover,
+.label-blue[href]:focus {
+    background-color: #0044cc;
+}
+
+.alert-blue {
+    color: #00308f;
+    background-color: #99bbff;
+    border-color: #7aa7ff;
+}
+
+.alert-blue hr {
+    border-top-color: #5c92ff;
+}
+
+.alert-blue .alert-link {
+    color: #002061;
+}
+
+.progress-bar-blue {
+    background-color: #0055ff;
+}
+
+.progress-striped .progress-bar-blue {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.list-group-item-blue {
+    color: #00308f;
+    background-color: #99bbff;
+}
+
+a.list-group-item-blue,
+button.list-group-item-blue {
+    color: #00308f;
+}
+
+a.list-group-item-blue .list-group-item-heading,
+button.list-group-item-blue .list-group-item-heading {
+    color: inherit;
+}
+
+a.list-group-item-blue:hover,
+button.list-group-item-blue:hover,
+a.list-group-item-blue:focus,
+button.list-group-item-blue:focus {
+    color: #00308f;
+    background-color: #85adff;
+}
+
+a.list-group-item-blue.active,
+button.list-group-item-blue.active,
+a.list-group-item-blue.active:hover,
+button.list-group-item-blue.active:hover,
+a.list-group-item-blue.active:focus,
+button.list-group-item-blue.active:focus {
+    color: #fff;
+    background-color: #00308f;
+    border-color: #00308f;
+}
+
+.panel-blue {
+    border-color: #7aa7ff;
+}
+
+.panel-blue > .panel-heading {
+    color: #00308f;
+    background-color: #99bbff;
+    border-color: #7aa7ff;
+}
+
+.panel-blue > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #7aa7ff;
+}
+
+.panel-blue > .panel-heading .badge {
+    color: #99bbff;
+    background-color: #00308f;
+}
+
+.panel-blue > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom-color: #7aa7ff;
+}
+
+.has-blue .help-block,
+.has-blue .control-label,
+.has-blue .radio,
+.has-blue .checkbox,
+.has-blue .radio-inline,
+.has-blue .checkbox-inline,
+.has-blue.radio label,
+.has-blue.checkbox label,
+.has-blue.radio-inline label,
+.has-blue.checkbox-inline label {
+    color: #003cb3;
+}
+
+.has-blue .form-control {
+    border-color: #003cb3;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.has-blue .form-control:focus {
+    border-color: #00308f;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}
+
+.has-blue .input-group-addon {
+    color: #003cb3;
+    background-color: #00308f;
+    border-color: #003cb3;
+}
+
+.has-blue .form-control-feedback {
+    color: #003cb3;
 }
