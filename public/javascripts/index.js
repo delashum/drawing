@@ -136,7 +136,15 @@ app.controller('ctrl', ['$scope', function ($scope) {
         $('.white-over').fadeOut();
         $('.login').slideUp();
     }
-
+    
+    $scope.changecolor = function(){
+	color = RandomColor();
+	$scope.users.forEach(function (e, i) {
+            if (e.username == user) {
+                e.color = color; 
+            }
+        }); 
+    }
 
     $scope.Clear = function () {
         $('canvas').clearCanvas();
