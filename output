@@ -1,0 +1,9 @@
+nohup: ignoring input
+
+> inter-drawing@0.0.0 start /opt/bitnami/apache2/htdocs/x/projects/inter-drawing
+> node ./bin/www
+
+[0mGET / [32m200 [0m12.437 ms - 2730[0m
+[0mGET /javascripts/jcanvas.min.js [36m304 [0m2.960 ms - -[0m
+[0mGET /javascripts/index.js [36m304 [0m3.361 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.189 ms - -[0m
